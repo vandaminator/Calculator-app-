@@ -5,6 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <main>
+      <section class="screen"></section>
+      <section class="buttons">
+        <div class="operators"></div>
+        <div class="basic-functions"></div>
+        <div class="numbers">
+          <div class="num-sections">
+            <button onclick="toScreen(0)">0</button>
+            <button onclick="toScreen(-1)">.</button>
+          </div>
+          <div class="num-sections">
+            <button onclick="toScreen(1)">1</button>
+            <button onclick="toScreen(2)">2</button>
+            <button onclick="toScreen(3)">3</button>
+          </div>
+          <div class="num-sections">
+            <button onclick="toScreen(4)">4</button>
+            <button onclick="toScreen(5)">5</button>
+            <button onclick="toScreen(6)">6</button>
+          </div>
+          <div class="num-sections">
+            <button onclick="toScreen(7)">7</button>
+            <button onclick="toScreen(8)">8</button>
+            <button onclick="toScreen(9)">9</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>
