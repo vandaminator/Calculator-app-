@@ -1,2 +1,4 @@
 # Calculator-app-
-sometimes i forget my Math 😂
+Sometimes I forget my Math 😂
+
+## Testing my website making skills 
