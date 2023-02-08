@@ -11,13 +11,14 @@
     <main>
       <section class="screen"></section>
       <section class="buttons">
-        <div class="operators"></div>
+        <div class="operators">
+          <button>+</button>
+          <button>-</button>
+          <button>x</button>
+          <button>/</button>
+        </div>
         <div class="basic-functions"></div>
         <div class="numbers">
-          <div class="num-sections">
-            <button onclick="toScreen(0)">0</button>
-            <button onclick="toScreen(-1)">.</button>
-          </div>
           <div class="num-sections">
             <button onclick="toScreen(1)">1</button>
             <button onclick="toScreen(2)">2</button>
@@ -32,6 +33,10 @@
             <button onclick="toScreen(7)">7</button>
             <button onclick="toScreen(8)">8</button>
             <button onclick="toScreen(9)">9</button>
+          </div>
+          <div class="num-sections">
+            <button onclick="toScreen(0)" class="special">0</button>
+            <button onclick="toScreen(-1)">.</button>
           </div>
         </div>
       </section>
