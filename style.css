@@ -32,7 +32,7 @@ LAYOUT CSS
 */
 
 .screen {
-  height: 15vh;
+  height: 0.8fr;
   width: 100%;
   background-color: rgb(180, 66, 66);
 }
@@ -50,8 +50,8 @@ BUTTONS CSS
 
 .buttons {
   display: grid;
-  grid-template-columns: 1fr 25vw;
-  grid-template-rows: 15vh 1fr;
+  grid-template-columns: 1fr 0.5fr;
+  grid-template-rows: 0.3fr 1fr;
   grid-template-areas:
     "alias-bf alias-op"
     "alias-n alias-op";
@@ -92,6 +92,7 @@ NUMBERS CSS
 
 .num-sections button {
   font-size: 80%;
+  margin: 0 10px;
 }
 
 /* 
@@ -115,6 +116,49 @@ OPERATOR BUTTONS
 
 /* 
 ************************************
+BASIC FUNCTIONS BUTTONS
+************************************
+*/
+
+.basic-functions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.basic-functions button {
+  margin: 0 10px;
+}
+
+/* 
+************************************
+SCREEN CSS
+************************************
+*/
+
+.screen {
+  display: flex;
+  align-items: baseline;
+  justify-content: baseline;
+}
+
+input {
+  height: 6vh;
+  padding: 30px;
+  background-color: rgb(180, 66, 66);
+  border: 5px solid gray;
+  border-radius: 10px;
+  border-top: none;
+  outline: none;
+  text-align: right;
+  color: white;
+  width: 100%;
+  font-size: 2.6rem;
+  align-self: flex-end;
+}
+
+/* 
+************************************
 MEDIA QUERIES
 ************************************
 */
@@ -122,5 +166,17 @@ MEDIA QUERIES
 @media (min-height: 600px) {
   .screen {
     height: 100px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 768px 1fr;
+    grid-template-areas: ". alias-m .";
+  }
+
+  main {
+    grid-area: alias-m;
   }
 }

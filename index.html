@@ -9,15 +9,25 @@
   </head>
   <body>
     <main>
-      <section class="screen"></section>
+      <section class="screen">
+        <input
+          type="text"
+          oninput="this.value = this.value.replace(/[^0-9\.\-\+\*\/\(\)]/g, '').replace(/(\..*?)\..*/g, '$1');"
+        />
+      </section>
       <section class="buttons">
         <div class="operators">
           <button>+</button>
           <button>-</button>
           <button>x</button>
           <button>/</button>
+          <button>=</button>
         </div>
-        <div class="basic-functions"></div>
+        <div class="basic-functions">
+          <button class="clear-button">C</button>
+          <button class="parnthesis">()</button>
+          <button class="percentage">%</button>
+        </div>
         <div class="numbers">
           <div class="num-sections">
             <button onclick="toScreen(1)">1</button>
@@ -35,8 +45,9 @@
             <button onclick="toScreen(9)">9</button>
           </div>
           <div class="num-sections">
-            <button onclick="toScreen(0)" class="special">0</button>
-            <button onclick="toScreen(-1)">.</button>
+            <button onclick="toScreen(-1)">+/-</button>
+            <button onclick="toScreen(0)">0</button>
+            <button onclick="toScreen('.')">.</button>
           </div>
         </div>
       </section>
