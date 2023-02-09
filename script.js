@@ -1,6 +1,14 @@
 // add value
 function toScreen(number) {
-    window.alert('number pressed was ' + number)
+    const inputElement = document.querySelector('input');
+    inputElement.value = inputElement.value + number;
+    onInputFunc()
+}
+
+function deleteFunc () {
+    const inputElement = document.querySelector('input');
+    const value = inputElement.value.slice(0,-1);
+    inputElement.value = value
 }
 
 
@@ -33,3 +41,14 @@ function percentageFunc() {
 }
 const percentageElement = document.querySelector('.percentage');
 percentageElement.addEventListener('click', percentageFunc);
+
+
+function onInputFunc() {
+    const inputElement = document.querySelector('input');
+    let value = inputElement.value;
+    value = value.replace(/[^0-9\.\-\+\*\/\(\)\%]/g, '').replace(/(\..*?)\..*/g, '$1').replace('%', '/100');
+    inputElement.value = value;
+    const numbersElement = document.querySelector('.text');
+    numbersElement.innerHTML = value;
+    numbersElement.innerHTML = value !== '' ? eval(value) : ' ';
+}

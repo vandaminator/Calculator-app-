@@ -23,6 +23,8 @@ button {
   font-size: 32px;
   width: 25%;
   height: 70%;
+  border-radius: 30%;
+  background-color: white;
 }
 
 /* 
@@ -34,12 +36,12 @@ LAYOUT CSS
 .screen {
   height: 0.8fr;
   width: 100%;
-  background-color: rgb(180, 66, 66);
+  background-color: rgb(116, 116, 116);
 }
 
 .buttons {
   width: 100%;
-  background-color: rgb(85, 85, 85);
+  background-color: rgb(182, 178, 178);
 }
 
 /* 
@@ -59,17 +61,17 @@ BUTTONS CSS
 
 .operators {
   grid-area: alias-op;
-  background-color: chartreuse;
+  background-color: rgb(92, 92, 92);
 }
 
 .basic-functions {
   grid-area: alias-bf;
-  background-color: deepskyblue;
+  background-color: rgb(107, 107, 107);
 }
 
 .numbers {
   grid-area: alias-n;
-  background-color: magenta;
+  background-color: rgb(5, 5, 5);
 }
 
 /* 
@@ -81,7 +83,7 @@ NUMBERS CSS
 .numbers {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
-  height: 70vh;
+  height: 67vh;
 }
 
 .num-sections {
@@ -93,6 +95,7 @@ NUMBERS CSS
 .num-sections button {
   font-size: 80%;
   margin: 0 10px;
+  background-color: grey;
 }
 
 /* 
@@ -112,6 +115,9 @@ OPERATOR BUTTONS
   height: 15%;
   width: 50%;
   margin: 10px;
+  color: white;
+  background-color: rgba(255, 166, 0, 0.781);
+  border: none;
 }
 
 /* 
@@ -128,6 +134,7 @@ BASIC FUNCTIONS BUTTONS
 
 .basic-functions button {
   margin: 0 10px;
+  background-color: greenyellow;
 }
 
 /* 
@@ -138,20 +145,27 @@ SCREEN CSS
 
 .screen {
   display: flex;
+  flex-direction: column;
   align-items: baseline;
   justify-content: baseline;
 }
 
+.text {
+  font-size: 20px;
+  color: aqua;
+  margin: 0;
+  margin-right: 10px;
+  align-self: end;
+}
+
 input {
-  height: 6vh;
-  padding: 30px;
-  background-color: rgb(180, 66, 66);
+  background-color: rgb(255, 255, 255);
   border: 5px solid gray;
   border-radius: 10px;
   border-top: none;
   outline: none;
   text-align: right;
-  color: white;
+  color: rgb(0, 0, 0);
   width: 100%;
   font-size: 2.6rem;
   align-self: flex-end;

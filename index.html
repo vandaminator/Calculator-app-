@@ -10,18 +10,17 @@
   <body>
     <main>
       <section class="screen">
-        <input
-          type="text"
-          oninput="this.value = this.value.replace(/[^0-9\.\-\+\*\/\(\)]/g, '').replace(/(\..*?)\..*/g, '$1');"
-        />
+        <p class="text">hello</p>
+        <input type="text" oninput="onInputFunc()" />
       </section>
       <section class="buttons">
         <div class="operators">
-          <button>+</button>
-          <button>-</button>
-          <button>x</button>
-          <button>/</button>
-          <button>=</button>
+          <button onclick="deleteFunc()">DEL</button>
+          <button onclick="toScreen('+')">+</button>
+          <button onclick="toScreen('-')">-</button>
+          <button onclick="toScreen('*')">x</button>
+          <button onclick="toScreen('/')">/</button>
+          <button onclick="equalFunc()">=</button>
         </div>
         <div class="basic-functions">
           <button class="clear-button">C</button>
