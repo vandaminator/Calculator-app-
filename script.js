@@ -5,16 +5,24 @@ function toScreen(number) {
     onInputFunc()
 }
 
+function toScreenOp(op) {
+    const inputElement = document.querySelector('input');
+    inputElement.value = inputElement.value + op;
+}
+
 function deleteFunc () {
     const inputElement = document.querySelector('input');
     const value = inputElement.value.slice(0,-1);
-    inputElement.value = value
+    inputElement.value = value;
+    onInputFunc();
 }
 
 
 
 function clearScreen() {
-    window.alert('screen cleared')
+    const inputElement = document.querySelector('input');
+    inputElement.value = '';
+    onInputFunc();
 }
 const clearBtnElement = document.querySelector('.clear-button');
 clearBtnElement.addEventListener('click', clearScreen);
@@ -25,10 +33,12 @@ clearBtnElement.addEventListener('click', clearScreen);
 let groupOut = true;
 function parenthisisFunc () {
     if (groupOut) {
-        window.alert('we are in');
+        const inputElement = document.querySelector('input');
+        inputElement.value = inputElement.value + '(';
         groupOut = false;
     } else {
-        window.alert('we are out');
+        const inputElement = document.querySelector('input');
+        inputElement.value = inputElement.value + ')';
         groupOut = true;
     }
 }
@@ -51,4 +61,10 @@ function onInputFunc() {
     const numbersElement = document.querySelector('.text');
     numbersElement.innerHTML = value;
     numbersElement.innerHTML = value !== '' ? eval(value) : ' ';
+}
+
+function equalFunc(params) {
+    const textElement = document.querySelector('.text');
+    const inputElement = document.querySelector('input');
+    inputElement.value = textElement.innerHTML;
 }
